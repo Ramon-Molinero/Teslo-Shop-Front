@@ -1,6 +1,6 @@
 import { Manager, Socket } from "socket.io-client"
 
-let socket: Socket;;
+let socket: Socket;
 let statusClient: 'Online' | 'Offline' = 'Offline';
 
 
@@ -89,7 +89,7 @@ export const connectToServer = (jwtToken: string) => {
         //     socket.disconnect();
         // }
 
-        const manager = new Manager('localhost:3000/socket.io/socket.io.js', {
+        const manager = new Manager('https://teslo-shop-nest-iv2l.onrender.com/socket.io/socket.io.js', {
             
             extraHeaders: {
                 Authorization: jwtToken,
